@@ -1,0 +1,90 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1 {
+    margin-top: 20px;
+    font-size: 2.5em;
+    color: #343a40;
+    letter-spacing: 2px;
+  }
+  
+  .message {
+    font-size: 1.5em;
+    margin: 15px 0;
+    color: #495057;
+    font-weight: bold;
+  }
+  
+  /* Board Styles */
+  .board {
+    display: grid;
+    grid-template-columns: repeat(3, 120px);
+    grid-template-rows: repeat(3, 120px);
+    gap: 10px;
+    justify-content: center;
+    margin: 20px auto;
+  }
+  
+  .sqr {
+    width: 120px;
+    height: 120px;
+    background-color: #ffffff;
+    border: 4px solid #6c757d;
+    font-size: 2.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .sqr:hover {
+    background-color: #f1f3f5;
+    transform: scale(1.05);
+  }
+  
+  .sqr:active {
+    background-color: #dee2e6;
+  }
+  
+  /* Player Colors */
+  .sqr[data-player="X"] {
+    color: #007bff; /* Blue for X */
+    font-weight: bold;
+  }
+  
+  .sqr[data-player="O"] {
+    color: #dc3545; /* Red for O */
+    font-weight: bold;
+  }
+  
+  /* Reset Button Styles */
+  button#reset {
+    padding: 12px 25px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  button#reset:hover {
+    background-color: #0056b3;
+  }
+  
+  button#reset:active {
+    transform: scale(0.98);
+  }
+  
